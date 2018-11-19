@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.PMADB.PMADB"
+  TargetPlatform="RichClient"
+  Version="1.0.0.0"
+  DefaultNavigationItem="!module/NavigationItems[Tasks]"
+  Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
+  Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <ModuleNamespace
+      Namespace="LightSwitchApplication" />
+    <Partial
+      IsPrimary="True" />
+  </Application.Attributes>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="ApplicationData"
+      EntityContainer="ApplicationData" />
+  </EntityContainerGroup>
+  <GlobalAttributeGroup>
+    <GlobalAttributeGroup.Attributes>
+      <Proxy
+        Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:AddLookupData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:EditLookupData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:DelLookupData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:AddAppData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:EditAppData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:DelAppData" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:EditMeetingDecision" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CanViewAudit" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CanViewLookup" />
+    </Permission.Attributes>
+  </Permission>
+  <Permission>
+    <Permission.Attributes>
+      <Proxy
+        Target="ServiceInterface:CanViewAppData" />
+    </Permission.Attributes>
+  </Permission>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowAdvertisementPurposeGrid"
+      Target="!module/Methods[ShowAdvertisementPurposeGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowMediaTypesGrid"
+      Target="!module/Methods[ShowMediaTypesGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowProductGrid"
+      Target="!module/Methods[ShowProductGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAdvertisementApplications"
+      Target="!module/Methods[ShowAdvertisementApplications]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowMeetingsDetails"
+      Target="!module/Methods[ShowMeetingsDetails]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowViewAuditTrail"
+      Target="!module/Methods[ShowViewAuditTrail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowApplicantGrid"
+      Target="!module/Methods[ShowApplicantGrid]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowApplications"
+      Target="!module/Methods[ShowApplications]" />
+  </Application.Commands>
+  <Application.NavigationItems>
+    <ApplicationNavigationGroup
+      Name="Tasks"
+      DefaultItem="!module/NavigationItems[Tasks]/Children[AdvertisementApplications]">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Tasks" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="AdvertisementApplications"
+        Command="!module/Commands[ScreenCommandShowAdvertisementApplications]" />
+      <ApplicationNavigationLink
+        Name="MeetingsDetails"
+        Command="!module/Commands[ScreenCommandShowMeetingsDetails]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Associated Data" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowAdvertisementPurposeGrid]" />
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowMediaTypesGrid]" />
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowProductGrid]" />
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowApplicantGrid]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Audit" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowViewAuditTrail]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="Administration">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Administration" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="RolesScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]" />
+      <ApplicationNavigationLink
+        Name="UsersScreen"
+        Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+    </ApplicationNavigationGroup>
+  </Application.NavigationItems>
+</Application>

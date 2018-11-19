@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.PMADB.PMAD" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_meeting" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_meeting_decision" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_applicant" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_lu_media" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_lu_adv_purpose" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_lu_product" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_product" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_media" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_purpose" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:ApplicationData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
+  <Association
+    Name="si_application_si_applicant">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_si_applicant" />
+    </Association.Attributes>
+  </Association>
+  <Association
+    Name="si_application_si_application_product">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_si_application_product" />
+    </Association.Attributes>
+  </Association>
+  <Association
+    Name="si_application_si_application_media">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_si_application_media" />
+    </Association.Attributes>
+  </Association>
+  <Association
+    Name="si_application_si_application_purpose">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_application_si_application_purpose" />
+    </Association.Attributes>
+  </Association>
+  <Association
+    Name="si_meeting_decision_si_application">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_meeting_decision_si_application" />
+    </Association.Attributes>
+  </Association>
+  <Association
+    Name="si_meeting_decision_si_meeting">
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:si_meeting_decision_si_meeting" />
+    </Association.Attributes>
+  </Association>
+</Application>

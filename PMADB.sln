@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "PMADB", "PMADB\PMADB.lsxtproj", "{29D6A630-7CB3-4638-B124-54629E75B87C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMADB.Server", "PMADB\PMADB.Server\PMADB.Server.csproj", "{A38ACFB5-A528-4830-A645-C68014B3E15E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMADB.PMADB", "PMADB\PMADB.PMADB\PMADB.PMADB.csproj", "{67418719-CBE2-41E4-82BB-1CE769E7ACF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29D6A630-7CB3-4638-B124-54629E75B87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D6A630-7CB3-4638-B124-54629E75B87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D6A630-7CB3-4638-B124-54629E75B87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D6A630-7CB3-4638-B124-54629E75B87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38ACFB5-A528-4830-A645-C68014B3E15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38ACFB5-A528-4830-A645-C68014B3E15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38ACFB5-A528-4830-A645-C68014B3E15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38ACFB5-A528-4830-A645-C68014B3E15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67418719-CBE2-41E4-82BB-1CE769E7ACF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67418719-CBE2-41E4-82BB-1CE769E7ACF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67418719-CBE2-41E4-82BB-1CE769E7ACF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67418719-CBE2-41E4-82BB-1CE769E7ACF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
