@@ -111,9 +111,12 @@ namespace LightSwitchApplication
                     auditRecord.ReferenceId = (int)entity.Details.Properties["Id"].Value;
                     auditRecord.ReferenceType = entity.Details.EntitySet.Details.Name;
                     auditRecord.ReferenceProp = prop.Name;
-                    auditRecord.OriginalValues = prop.OriginalValue.ToString();
+                    //auditRecord.OriginalValues = prop.OriginalValue.ToString();
+                    auditRecord.OriginalValues = prop.OriginalValue.ToString() ?? String.Empty;
                 }
             }
+
+
 
             foreach (var prop in entity.Details.Properties.All().OfType<IEntityReferenceProperty>())
             {
@@ -126,7 +129,8 @@ namespace LightSwitchApplication
                     auditRecord.ReferenceId = (int)entity.Details.Properties["Id"].Value;
                     auditRecord.ReferenceType = entity.Details.EntitySet.Details.Name;
                     auditRecord.ReferenceProp = prop.Name;
-                    auditRecord.OriginalValues = prop.OriginalValue.ToString();
+                    //auditRecord.OriginalValues = prop.OriginalValue.ToString();
+                    auditRecord.OriginalValues = Convert.ToString(prop.OriginalValue);
                 }
             }
         }

@@ -57,6 +57,15 @@
         FromEnd="si_application_adv_detail"
         ToEnd="si_application_adv_file" />
       <EntityProperty
+        Name="fileName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Computed />
+          <DisplayName
+            Value="File Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="CreatedBy"
         IsReadOnly="True"
         PropertyType=":Person?">

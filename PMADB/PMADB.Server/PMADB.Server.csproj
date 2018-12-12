@@ -212,6 +212,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuditHelper.cs" />
+    <Compile Include="DataSources\ApplicationData\si_application_adv_detail.lsml.cs">
+      <DependentUpon>si_application_adv_details.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\ApplicationData\si_meeting_decision.lsml.cs">
       <DependentUpon>si_meeting_decisions.lsml</DependentUpon>
     </Compile>

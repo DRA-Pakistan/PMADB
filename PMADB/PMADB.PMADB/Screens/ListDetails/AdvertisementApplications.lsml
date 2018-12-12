@@ -326,6 +326,10 @@
                 Name="Group4"
                 Kind="Group"
                 View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Advertisement Details" />
+                </ContentItem.Attributes>
                 <ContentItem
                   Name="si_application_mediaCollection"
                   Kind="Collection"
@@ -398,31 +402,14 @@
                       </ContentItem>
                     </ContentItem>
                     <ContentItem
-                      Name="advFileName"
+                      Name="fileName"
                       Kind="Value"
-                      DataType=":String?">
+                      DataType=":String">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
                             <MemberExpression
-                              Member="si_application_adv_detail/Properties[si_application_adv_file]" />
-                            <MemberExpression
-                              Member="advFileName" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                    </ContentItem>
-                    <ContentItem
-                      Name="advFileDirectory"
-                      Kind="Value"
-                      DataType=":String?">
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="si_application_adv_detail/Properties[si_application_adv_file]" />
-                            <MemberExpression
-                              Member="advFileDirectory" />
+                              Member="si_application_adv_detail/Properties[fileName]" />
                           </ChainExpression>
                         </ScreenExpressionTree>
                       </ContentItem.DataSource>
